@@ -34,8 +34,9 @@
 		<thead>
 			<tr>
 				<th width="50">no.</th>
-				<th width="100">작성자</th>
-				<th width="250">제목</th>
+				<th width="70">작성자</th>
+				<th width="100">제목</th>
+				<th width="250">내용</th>
 				<th width="70">작성일</th>
 				<th width="50">조회수</th>
 			</tr>
@@ -46,7 +47,7 @@
 				<c:forEach items="${list }" var="b">
 					<tr>
 						<td>${b.boardNo }</td>
-						<td>${b.boardId }</td>
+			<!--  		<td>${b.boardId }</td> -->
 						<td>${b.boardWriter }</td>
 						<td><a href="qnaBoardSelect.do">${b.boardTitle }</a></td>
 						<td>${b.boardContent }</td>

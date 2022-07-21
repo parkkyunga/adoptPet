@@ -1,4 +1,4 @@
-package co.yedam.puppy.member.command;
+package co.yedam.puppy.admin.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,7 +9,7 @@ import co.yedam.puppy.member.service.MemberService;
 import co.yedam.puppy.member.service.MemberServiceImpl;
 import co.yedam.puppy.vo.MemberVO;
 
-public class MemberMyPage implements Command {
+public class MemberOnePage implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
@@ -17,21 +17,14 @@ public class MemberMyPage implements Command {
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		
-		//로그인한 계정가져오기 
-		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("id");
-		String author = (String) session.getAttribute("author");
-
-
-		vo.setMemberId(id);
-		vo.setMemberAuthor(author);
 		
-
+		vo.setMemberId(request.getParameter("memberId"));
+		
 		vo = memberDao.memberSelectOne(vo);
 		
 		request.setAttribute("member", vo);
 		
-		return "member/memberMyPage";
+		return "admin/memberOnePage";
 	}
 
 }

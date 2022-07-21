@@ -11,6 +11,15 @@
 <link href="css/adoptpet.css" rel="stylesheet" />   
 <style>
 
+/* #cardList { */
+
+/*   position: absolute;  */
+/*   top: 0;  */
+/*   right: 0;  */
+/*   padding: 20px;  */
+/* } */
+
+
 	.card {
 	  float:left;
 	  margin:15px;
@@ -28,6 +37,8 @@
 	  padding: 2px 16px;
 	}
 	
+
+/* ===== */
 	#search {
 		display: inline-block;
 		float: right;
@@ -42,20 +53,25 @@
 	
 	
 </style>
+
 </head>
 <body>
-<div style="margin-top: 80px" class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8 col-xl-6 text-center">
-            <h2 class="mt-0">PET &nbsp;&nbsp; INTRODUCE</h2>
-            <hr class="divider" />
-        </div>
-    </div>
+
+
+<!-- =========== -->
+	
+    	
+    	
+		
+		
 		<div id="list">
 		<section class="notice">
   		<div class="page-title">
         	<div class="container">
+            	<h3>입양동물 소개</h3>
             	<c:if test="${author eq 'ADMIN' }">
             	<div id="search" align="right">
+            	
 			<form id="frm" action="petListSearch.do" method="post">
 				<select id="key" name="key" >
 					<option value="pet_list_title">제목</option>
