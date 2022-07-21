@@ -1,13 +1,8 @@
 package co.yedam.puppy.qnaBoard.command;
 
-import java.io.IOException;
-import java.sql.Date;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import javax.servlet.http.HttpSession;
 
 import co.yedam.puppy.board.service.BoardService;
 import co.yedam.puppy.board.service.BoardServiceImpl;
@@ -22,20 +17,16 @@ public class QnaBoardInsert implements Command {
 		BoardService Dao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
 		
-		String no = request.getParameter("boardNo");
-		vo.setBoardNo(Integer.parseInt(no));
-		String id = request.getParameter("boardId");
-		vo.setBoardId(Integer.parseInt(id));
-		
 		vo.setBoardTitle(request.getParameter("boardTitle"));
 		vo.setBoardWriter(request.getParameter("boardWriter"));
 		vo.setBoardContent(request.getParameter("boardContent"));
-		String date = request.getParameter("boardDate");
-		vo.setBoardDate(Date.valueOf(date));
-		String hit = request.getParameter("boardHit");
-		vo.setBoardHit(Integer.parseInt(hit));
+		System.out.println(request.getParameter("boardTitle"));
+		System.out.println(request.getParameter("boardWriter"));
+		System.out.println(request.getParameter("boardContent"));
 		
-		
+		HttpSession session = request.getSession();
+		String id = (String) session.getAttribute("id");
+		request.setAttribute("id", id);
 		
 		int r = Dao.qnaBoardInsert(vo); // int 타입 0건입력 1건입력
 		
@@ -44,7 +35,7 @@ public class QnaBoardInsert implements Command {
 		} else {
 			request.setAttribute("message", "등록처리가 실패했습니다.");
 		}
-		return "qna/qnaBoardList"; 
+		return "qna/qnaBoardList.do"; 
 	}
 		
 
