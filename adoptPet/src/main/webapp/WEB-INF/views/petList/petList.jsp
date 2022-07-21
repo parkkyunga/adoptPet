@@ -40,6 +40,7 @@
 	}
 	
 	
+	
 </style>
 </head>
 <body>
@@ -74,15 +75,14 @@
 		<div class="card">
 			<c:if test="${empty list.filesPath1}">
   			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:100%"></a>
+  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:370px" height="240px"></a>
   			</c:if>
   			<c:if test="${not empty list.filesPath1}">
   			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:100%"></a>
+  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:370px" height="240px"></a>
   			</c:if>
   			 <div class="container">
    			 	<h5>[${list.petListState}]&nbsp;<b><a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">${list.petListTitle}</a></b></h5> 
-   			 	<p>
    			 		<div>
 						<button id="heartBtn" type="button" class="btn btn-primary btn-xl" onclick="heartCheckFnc(${list.petListNo},${list.heartNum })">
 							<c:choose>
@@ -96,7 +96,6 @@
 						</button>
 						<span id="heartNum${list.petListNo}">${list.heartNum }</span> 
 					</div>
-   			 	</p> 
  			 </div>
 		</div>
 </c:forEach>
