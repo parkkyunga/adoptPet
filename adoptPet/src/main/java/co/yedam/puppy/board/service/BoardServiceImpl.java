@@ -334,7 +334,7 @@ public class BoardServiceImpl implements BoardService {
 			close();
 		}
 		
-		return vo;
+		return null;
 	}
 
 	@Override
@@ -792,11 +792,10 @@ public class BoardServiceImpl implements BoardService {
 	public int qnaBoardInsert(BoardVO vo) {
 		// 문의게시판 글 쓰기
 		int n = 0;
-		String sql = "INSERT INTO BOARD VALUES(notice_seq.nextval,30,?,?,?,SYSDATE,0)";
+		String sql = "INSERT INTO BOARD VALUES(qna_seq.nextval,30,?,?,?,SYSDATE,0)";
 		try {
 			conn = dao.getConnection();
 			psmt = conn.prepareStatement(sql);
-//			psmt.setInt(1, vo.getBoardId());
 			psmt.setString(1, vo.getBoardTitle());
 			psmt.setString(2, vo.getBoardWriter());
 			psmt.setString(3, vo.getBoardContent());

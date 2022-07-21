@@ -44,5 +44,5 @@ public interface BoardService {
 	int qnaBoardDelete(BoardVO vo);//문의 글 삭제 
 	List<BoardVO> qnaBoardSearchList(String key, String val);//검색
 	int qnaBoardCount();// 문의게시판 글 개 수 확인 
-
+	
 }
