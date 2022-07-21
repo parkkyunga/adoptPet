@@ -176,6 +176,8 @@ span.psw {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
+	     
+
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 
 				<% if(session.getAttribute("id") == null){ // 로그인 안 한 상태 = 비회원 %>
@@ -191,6 +193,7 @@ span.psw {
     <div class="container">
       <label for="uId"><b>UserId</b></label>
       <input type="text" placeholder="Enter UserId" name="uId" required>
+
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
@@ -217,6 +220,14 @@ window.onclick = function(event) {
 }
 </script>
 					
+
+				<ul class="navbar-nav ms-auto my-2 my-lg-0">
+				    <li class="nav-item"><a class="nav-link" href="#services">MY PAGE</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#services">ADOPT PAGE</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#services">VOLUNTEER</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#services">COMMUNITY</a></li>
+	                <li class="nav-item"><a class="nav-link" href="memberLoginForm.do">Login</a></li>
+
 					<li class="nav-item"><a class="nav-link" href="memberJoinForm.do">회원가입</a></li>
 				</ul>
 				
