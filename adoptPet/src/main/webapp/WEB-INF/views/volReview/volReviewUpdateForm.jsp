@@ -11,52 +11,42 @@
 		<div>
 			<h1>게시글 수정 등록</h1>
 		</div>
-		<div>
-			<form action="volReviewUpdateForm.do" method="post">
-				<div>
-				<input type="hidden" id="boardNo" name="boardNo" value="${BoardVO.boardNo}">
-						
-						<br>
-					<table border="1">
-
+	<div>
+		<form action="volReviewUpdate.do" method="post">
+			<div>
+				<table border="1">
+					<tbody>
+						<c:choose>
+							<c:when test="${not empty BoardVO }">
+								<input type="hidden" id="boardNo" size="73" name="boardNo" value="${BoardVO.boardNo}">
 						<tr>
 							<th width="100">게시판유형</th>
-							<td width="200"><input type="text" id="boardId"
-								name="boardId" value="${BoardVO.boardId }">
+							<td width="200"><input type="text" size="73" id="boardId" name="boardId" value="${BoardVO.boardId }">
 							<td></td>
 						</tr>
 
 						<tr>
 							<th>제목</th>
-							<td colspan="3"><input type="text" size="73" id="boardTitle"
-								name="boardTitle" value="${BoardVO.boardTitle }"><br>
+							<td colspan="3"><input type="text" size="73" id="boardTitle" name="boardTitle" value="${BoardVO.boardTitle }">
 							</td>
 						</tr>
 						<tr>
-							<th width="100">작성자 <input type="text" id="boardWriter"
-								name="boardWriter" value="${BoardVO.boardWriter }"><br>
+							<th width="100">작성자</th>
+							<td><input type="text" id="boardWriter" name="boardWriter" value="${BoardVO.boardWriter }"></td>
 						</tr>
 
 						<tr>
-							<th>내용
-							<th>
-							<td colspan="3"><textarea rows="6" cols="75"
-									id="boardContent" name="boardContent"></textarea>></td>
+							<th>내용</th>
+							<td colspan="3"><textarea id="boardContent" name="boardContent">${BoardVO.boardContent}</textarea></td>
 						</tr>
-
-						<tr>
-							<th width="150">작성일자</th>
-							<td width="200"><input type="date" id="boardDate" name="boardDate"></td>
-						</tr>
-
-						<tr>
-							<th>조회수</th>
-							<td><input type="number" id="boaardHit" name="boaardHit">
-							</td>
-						</tr>
+								</c:when>
+				
+							</c:choose>
+						</tbody>
 					</table>
 				</div>
-				<br> <input type="submit" value="수정">&nbsp;&nbsp;&nbsp;
+				<br> 
+				<input type="submit" value="수정완료">&nbsp;&nbsp;&nbsp;
 				<input type="reset" value="취소">&nbsp;&nbsp;&nbsp;
 			</form>
 		</div>
