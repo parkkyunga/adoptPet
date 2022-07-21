@@ -39,6 +39,7 @@
 	}
 	
 	
+	
 </style>
 
 </head>
@@ -70,6 +71,7 @@
 		</c:if>
         	</div>
     	</div>
+ 
 
 	<div id="cardList">
 	<c:forEach var="list" items="${petList}">
@@ -102,6 +104,7 @@
 	 			 </div>
 			</div>
 	</c:forEach>
+
 	</div>
 </div>
 	
