@@ -5,69 +5,56 @@
 <head>
 <meta charset="UTF-8">
 <title>봉사활동후기 단건조회</title>
+<link href="css/adoptpet.css" rel="stylesheet" />
 <style>
 table {
 	border: 1px solid black;
 	border-radius: 10px;
 }
+
+button {
+	float: right;
+}
 </style>
-<h2>봉사후기글 상세페이지</h2>
 </head>
 <body>
-	<div align="center">
-		<div>
-			<h1>봉사후기 등록</h1>
-		</div>
-		<div>
-			<form action="volReviewSelectOne.do" method="post">
-				<div>
-				<input type="hidden" id="boardNo" name="boardNo" value="${BoardVO.boardNo}">
-						
-						<br>
-					<table border="1">
+			<h1>봉사후기 내용</h1>
+		
+		
+			<form name="writeFrm">
+				<input type="hidden" name="boardNo" value="${BoardVO.boardNo}">
+				<table>
+					<tr>
+						<th width="100px" style="border: 1px solid #e7e7e7">글번호</th>
+						<td width="400px">${BoardVO.boardNo}</td>
+						<th style="border: 1px solid #e7e7e7">작성일자</th>
+						<td>${BoardVO.boardDate}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #e7e7e7">제목</th>
+						<td colspan="4">${BoardVO.boardTitle}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #e7e7e7">내용</th>
+						<td colspan="6" style="padding: 20px">${BoardVO.boardContent}</td>
+					</tr>
+				</table>
+				<button type="button" style="margin: 10px" class="btn btn-primary btn-xl" onclick="update()">수정</button>
+				<button type="button" style="margin: 10px" class="btn btn-primary btn-xl" onclick="location.href='volReviewList.do'">뒤로가기</button>
+		
+		</form>
+	
 
-						<tr>
-							<th width="100">게시판유형</th>
-							<td width="200"><input type="text" id="boardId"
-								name="boardId" value="${BoardVO.boardId }">
-							<td></td>
-						</tr>
-
-						<tr>
-							<th>제목</th>
-							<td colspan="3"><input type="text" size="73" id="boardTitle"
-								name="boardTitle" value="${BoardVO.boardTitle }"><br>
-							</td>
-						</tr>
-						<tr>
-							<th width="100">작성자 <input type="text" id="boardWriter"
-								name="boardWriter" value="${BoardVO.boardWriter }"><br>
-						</tr>
-
-						<tr>
-							<th>내용
-							<th>
-							<td colspan="3"><textarea rows="6" cols="75"
-									id="boardContent" name="boardContent"></textarea>></td>
-						</tr>
-
-						<tr>
-							<th width="150">작성일자</th>
-							<td width="200"><input type="date" id="boardDate"
-								name="boardDate"></td>
-						</tr>
-
-						<tr>
-							<th>조회수</th>
-							<td><input type="number" id="boaardHit" name="boaardHit">
-							</td>
-						</tr>
-					</table>
-				</div>
-				<br> <input type="submit" value="저장">&nbsp;&nbsp;&nbsp;
-				<input type="reset" value="취소">&nbsp;&nbsp;&nbsp;
-			</form>
-		</div>
-	</div>
+	<script>
+		function update() {
+			var result = confirm("게시글을 수정하시겠습니까?");
+			if (result) {
+				var form = document.writeFrm;
+				form.method = "post";
+				form.action = "volReviewUpdate.do";
+				form.submit();
+			}
+		}
+	</script>
 </body>
 </html>

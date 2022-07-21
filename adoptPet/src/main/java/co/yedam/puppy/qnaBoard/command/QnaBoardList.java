@@ -29,7 +29,7 @@ public class QnaBoardList implements Command {
 		int startRow = (currentPage - 1) * pageSize + 1;
 		
 		List<BoardVO> list = new ArrayList<BoardVO>();
-		list = boardDao.boardSelectList(currentPage, startRow, pageSize);
+		list = boardDao.qnaBoardSelectList(currentPage, startRow, pageSize);
 
 		request.setAttribute("list", list);
 		

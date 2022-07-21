@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지글 상세페이</title>
+<title>공지글 상세페이지</title>
 <link href="css/adoptpet.css" rel="stylesheet" />   
 <style>
 	table{
@@ -21,9 +21,12 @@
 <body>
 <section class="notice">
   		<div class="page-title">
-        	<div style="text-align: center;" class="container">
-            	<h2>공지글 상세페이지</h2>
-        	</div>
+        	 <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">NOTICE</h2>
+                        <hr class="divider" />
+                    </div>
+                </div>
     	</div>
  <div>
 	<table>
