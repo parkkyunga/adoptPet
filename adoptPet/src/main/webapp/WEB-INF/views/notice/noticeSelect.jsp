@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지글 상세페이</title>
+<link href="css/adoptpet.css" rel="stylesheet" />   
+<style>
+	table{
+		border: 1px solid #e7e7e7;
+		border-radius: 10px;
+	}
+	
+	button {
+		float: right;
+}
+	
+</style>
+</head>
+<body>
+<section class="notice">
+  		<div class="page-title">
+        	<div style="text-align: center;" class="container">
+            	<h2>공지글 상세페이지</h2>
+        	</div>
+    	</div>
+ <div>
+	<table>
+ 		<tr>
+ 			<th width="100px" style="border: 1px solid #e7e7e7">글번호</th>
+ 			<td width="400px">${board.boardNo}</td>
+			<th style="border: 1px solid #e7e7e7">작성일자</th>
+			<td>${board.boardDate}</td>
+		</tr>
+		<tr>
+			<th style="border: 1px solid #e7e7e7">제목</th>
+			<td colspan="4">${board.boardTitle}</td>
+		</tr>
+		<tr>
+			<th style="border: 1px solid #e7e7e7">내용</th>
+			<td colspan="6" style="padding: 20px">${board.boardContent}</td>
+		</tr>
+	</table>
+	<button type="submit" style="margin: 10px" class="btn btn-primary btn-xl">수정</button>
+	<button type="submit" style="margin: 10px" class="btn btn-primary btn-xl">삭제</button>
+ </div>
+ 
+</body>
+</html>
