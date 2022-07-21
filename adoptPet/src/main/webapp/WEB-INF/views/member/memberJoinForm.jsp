@@ -29,7 +29,7 @@
                         <div class="invalid-feedback" data-sb-feedback="name:required">아이디를 입력하세요.</div><br>
 						
 						<div class="d-grid">
-							<button class="btn btn-primary btn-xl" type="button" id="btn" onclick="idCheck()">중복체크</button>
+							<button class="btn btn-primary btn-l" type="button" id="btn" onclick="idCheck()">중복체크</button>
 						</div>
                     </div>
 		
@@ -68,7 +68,7 @@
                      </div>   
 					<div class="form-floating mb-3">
                         <input class="form-control"id="memberJob" name="memberJob" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">집업</label>
+                        <label for="name">직업</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">직업을 입력하세요.</div>
 					</div>
 		
@@ -81,9 +81,9 @@
 		</div>
 		
 		<div class="d-grid">
-		<input class="btn btn-primary btn-xl" type="submit" value="회원가입"><br>
-		<input class="btn btn-primary btn-xl" type="reset" value="내용 지우기"><br>
-		<input class="btn btn-primary btn-xl" type="submit" value="홈으로" onclick="location.href='main.do'">
+		<input class="btn btn-primary btn-l" type="submit" value="회원가입"><br>
+		<input class="btn btn-primary btn-l" type="reset" value="내용 지우기"><br>
+		<input class="btn btn-primary btn-l" type="button" value="홈으로" onclick="location.href='main.do'">
 		</div>
 		
 		</form>

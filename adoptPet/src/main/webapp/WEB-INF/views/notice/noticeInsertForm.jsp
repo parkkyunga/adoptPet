@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지글 적는 폼</title>
+<title>공지 글쓰기 </title>
 </head>
 <body>
 <div align="center">
