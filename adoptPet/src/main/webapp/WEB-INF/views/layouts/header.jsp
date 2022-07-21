@@ -44,6 +44,8 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
+	     
+
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 
 				<% if(session.getAttribute("id") == null){ // 로그인 안 한 상태 = 비회원 %>
@@ -53,7 +55,7 @@
 	                <li class="nav-item"><a class="nav-link" href="#services">ADOPT PAGE</a></li>
 	                <li class="nav-item"><a class="nav-link" href="#services">VOLUNTEER</a></li>
 	                <li class="nav-item"><a class="nav-link" href="#services">COMMUNITY</a></li>
-	                <li class="nav-item"><a class="nav-link" href="#memberLoginForm.do">Login</a></li>
+	                <li class="nav-item"><a class="nav-link" href="memberLoginForm.do">Login</a></li>
 					<li class="nav-item"><a class="nav-link" href="memberJoinForm.do">회원가입</a></li>
 				</ul>
 			

@@ -28,10 +28,6 @@ public class NoticeList implements Command {
 		int currentPage = Integer.parseInt(pageNum);
 		int startRow = (currentPage - 1) * pageSize + 1;
 		
-		request.setAttribute("cnt", cnt);
-		request.setAttribute("pageSize", pageSize);
-		request.setAttribute("pageNum", pageNum);
-		
 		List<BoardVO> list = new ArrayList<BoardVO>();
 		list = noticeDao.boardSelectList(currentPage, startRow, pageSize);
 
