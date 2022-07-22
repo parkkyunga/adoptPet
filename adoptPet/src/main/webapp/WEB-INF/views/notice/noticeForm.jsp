@@ -11,9 +11,12 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">NOTICE</h2>
+
+                        <h2 class="mt-0">WRITE A NOTICE!!</h2>
+
+
                         <hr class="divider" />
-                    </div>
+                    </div>	
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
@@ -52,7 +55,7 @@
                     </div>
                     
                     
-                     <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button>
+                     <div class="d-grid"><input class="btn btn-primary btn-xl" id="submitButton" type="submit">
                      </div>
                        
                        
