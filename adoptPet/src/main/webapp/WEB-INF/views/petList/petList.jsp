@@ -15,7 +15,7 @@
 	  margin:15px;
 	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	  transition: 0.3s;
-	  width: 370px;
+	  width: 330px;
 	  height: 350px;
 	}
 	
@@ -78,11 +78,11 @@
 			<div class="card">
 				<c:if test="${empty list.filesPath1}">
 	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-	  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:100%"></a>
+	  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
 	  			</c:if>
 	  			<c:if test="${not empty list.filesPath1}">
 	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-	  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:100%"></a>
+	  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
 	  			</c:if>
 	  			 <div class="container">
 	   			 	<h5>[${list.petListState}]&nbsp;<b><a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">${list.petListTitle}</a></b></h5> 
