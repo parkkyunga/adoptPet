@@ -48,6 +48,6 @@
 	<button type="submit" style="margin: 10px" class="btn btn-primary btn-xl">수정</button>
 	<button type="submit" style="margin: 10px" class="btn btn-primary btn-xl">삭제</button>
  </div>
- 
+ </section>
 </body>
 </html>

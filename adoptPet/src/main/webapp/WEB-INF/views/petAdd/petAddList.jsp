@@ -31,11 +31,16 @@
 	<section class="notice">
   		<div class="page-title">
         	<div class="container">
-            	<h3>입양 동물 등록</h3>
+            	<div class="row gx-4 gx-lg-5 justify-content-center">
+				<div class="col-lg-8 col-xl-6 text-center">
+					<h2 class="mt-0">INSERT&nbsp;&nbsp;PET&nbsp;&nbsp;INFORMATION</h2>
+					<hr class="divider" />
+				</div>
+			</div>
         	</div>
     	</div>
 	<div>
-		<table border="1">
+		<table>
 			<thead>
 				<tr>
 					<th>등록번호</th>
@@ -92,7 +97,6 @@
 				element.setAttribute('disabled','disabled');
 			}	
 		});
-
 		function petAddDeleteFnc(petAddNo) {
 			fetch('petAddDelete.do',{
 				method: 'post',
