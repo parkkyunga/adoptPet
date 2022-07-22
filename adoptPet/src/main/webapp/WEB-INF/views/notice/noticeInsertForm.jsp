@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지글 적는 폼</title>
+<title>공지 글쓰기 </title>
 </head>
 <body>
 <div align="center">
-	<div><h1>게시글등록</h1></div>
+	<div><h1>INSERT NOTICE</h1></div>
 	<div>
 		<form id="frm" action="noticeInsert.do" method="post" enctype="multipart/form-data">
 			<div>

@@ -29,7 +29,7 @@ public class AdoptReviewList implements Command{
 		int startRow = (currentPage - 1) * pageSize + 1;
 		
 		List<BoardVO> list = new ArrayList<BoardVO>();
-		list = noticeDao.boardSelectList(currentPage, startRow, pageSize);
+		list = noticeDao.adoptReviewSelectList(currentPage, startRow, pageSize);
 
 		request.setAttribute("list", list);
 		

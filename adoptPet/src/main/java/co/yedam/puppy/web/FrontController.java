@@ -72,11 +72,11 @@ import co.yedam.puppy.volunteerReview.command.VolReviewDelete;
 import co.yedam.puppy.volunteerReview.command.VolReviewForm;
 import co.yedam.puppy.petList.command.PetListView;
 import co.yedam.puppy.petList.command.PetListView2;
-import co.yedam.puppy.qnaBoard.command.AjaxQnaBoardSearch;
 import co.yedam.puppy.qnaBoard.command.QnaBoardDelete;
 import co.yedam.puppy.qnaBoard.command.QnaBoardForm;
 import co.yedam.puppy.qnaBoard.command.QnaBoardInsert;
 import co.yedam.puppy.qnaBoard.command.QnaBoardList;
+import co.yedam.puppy.qnaBoard.command.QnaBoardSearch;
 import co.yedam.puppy.qnaBoard.command.QnaBoardSelect;
 import co.yedam.puppy.qnaBoard.command.QnaBoardUpdate;
 import co.yedam.puppy.member.command.MemberDelete;
@@ -163,11 +163,7 @@ public class FrontController extends HttpServlet {
 		map.put("/volReviewUpdate.do", new VolReviewUpdate()); // 봉사활동후기 수정
 		map.put("/volReviewDelete.do", new VolReviewDelete()); // 봉사활동 후기 삭제
 
-
-
 		map.put("/memberOnePage.do", new MemberOnePage()); //관리자가보는 멤버한명조회
-
-
 
 		map.put("/memberList.do", new MemberList()); //모든회원리스트
 		map.put("/adoptList.do", new AdoptList());//모든입양신청리스트
@@ -180,19 +176,20 @@ public class FrontController extends HttpServlet {
 	
 
 		map.put("/qnaBoardList.do", new QnaBoardList()); // 문의게시판 리스트
-		map.put("/qnaBoardSelect.do", new QnaBoardSelect()); // 문의글 보기
+		map.put("/qnaBoardSelect.do", new QnaBoardSelect()); // 문의글 보기 !!!!!!!!
 		map.put("/qnaBoardForm.do", new QnaBoardForm());// 문의글 입력폼 호출
 		map.put("/qnaBoardInsert.do", new QnaBoardInsert()); // 문의글 등록
 		map.put("/qnaBoardUpdateForm.do", new QnaBoardUpdate()); // 문의글 수정
-		map.put("/ajaxQnaBoardList.do", new AjaxQnaBoardSearch()); // 문의글 검색
+		map.put("/qnaBoardDelete.do", new QnaBoardDelete()); // 문의글 삭제
+		map.put("/qnaBoardSearch.do", new QnaBoardSearch()); // 문의글 검색
 
 		
-		map.put("/adoptReviewList.do", new AdoptReviewList());//공지 리스트
-		map.put("/adoptReviewSelect.do", new AdoptReviewSelect());//공지 상세보기
-		map.put("/adoptReviewForm.do", new AdoptReviewForm());//공지 입력폼 호출
-		map.put("/adoptReviewInsert.do", new AdoptReviewInsert()); //공지 등록
-		map.put("/noticeUpdate.do", new AdoptReviewUpdate());//공지 수정 폼
-		map.put("/AdoptReviewSearch.do", new AdoptReviewSearch());//공지 검색
+		map.put("/adoptReviewList.do", new AdoptReviewList());//입양후기 리스트
+		map.put("/adoptReviewSelect.do", new AdoptReviewSelect());//입양후기 상세보기
+		map.put("/adoptReviewForm.do", new AdoptReviewForm());//입양후기 입력폼 호출
+		map.put("/adoptReviewInsert.do", new AdoptReviewInsert()); //입양후기 등록
+		map.put("/noticeUpdate.do", new AdoptReviewUpdate());//입양후기 수정 폼
+		map.put("/AdoptReviewSearch.do", new AdoptReviewSearch());//입양후기 검색
 		
 		map.put("/kakaoLogin.do", new KakaoLogin()); //카카오로그인
 

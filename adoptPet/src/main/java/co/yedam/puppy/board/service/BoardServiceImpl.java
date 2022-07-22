@@ -286,7 +286,7 @@ public class BoardServiceImpl implements BoardService {
 	public int boardCount() {
 		// DB에 있는 공지 글 갯수 확인
 		int n = 0;
-		String sql = "select * from board";
+		String sql = "select * from board where board_id=10";
 		
 		conn = dao.getConnection();
 		try {
@@ -334,7 +334,7 @@ public class BoardServiceImpl implements BoardService {
 			close();
 		}
 		
-		return null;
+		return vo;
 	}
 
 	@Override
@@ -554,7 +554,33 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardVO adoptFeviewSelectOne(BoardVO vo) {
 		// 후기 단건 조회
-		return null;
+		String sql = "select * from board where board_no=?";
+		
+		try {
+			conn = dao.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, vo.getBoardNo());
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				vo.setBoardNo(rs.getInt("board_no"));
+				vo.setBoardId(rs.getInt("board_Id"));
+				vo.setBoardTitle(rs.getString("board_title"));
+				vo.setBoardWriter(rs.getString("board_writer"));
+				vo.setBoardContent(rs.getString("board_content"));
+				vo.setBoardDate(rs.getDate("board_date"));
+				vo.setBoardHit(rs.getInt("board_hit"));
+//				fvo.setFilesNo(rs.getInt("files_no"));
+//				fvo.setFilesName(rs.getString("files_name"));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		return vo;
+		
 	}
 
 	@Override
@@ -834,7 +860,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int qnaBoardDelete(BoardVO vo) { 
+	public int qnaBoardDelete(int boardNo) { 
 		// 문의게시판 글 삭제
 		int n = 0;
 		String sql = "DELETE FROM BOARD WHERE BOARD_NO=?"; 
@@ -842,7 +868,7 @@ public class BoardServiceImpl implements BoardService {
 		try {
 			conn=dao.getConnection();
 			psmt=conn.prepareStatement(sql);
-			psmt.setInt(1, vo.getBoardNo());
+			psmt.setInt(1, boardNo);
 			psmt.executeUpdate();
 			
 			n = 1;  

@@ -19,10 +19,8 @@ public class QnaBoardDelete implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// 문의게시판 글 삭제
 		BoardService boardDao = new BoardServiceImpl();
-		BoardVO vo = new BoardVO();
 		String boardNo = request.getParameter("boardNo");
-		vo.setBoardNo(Integer.parseInt(boardNo));
-		int n = boardDao.qnaBoardDelete(vo);
+		int n = boardDao.qnaBoardDelete(Integer.parseInt(boardNo));
 		String json = "0";
 		if(n>0) {
 			json ="1";

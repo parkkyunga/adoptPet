@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
+<script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <section class="page-section" id="contact">
@@ -29,7 +30,7 @@
                         <div class="invalid-feedback" data-sb-feedback="name:required">아이디를 입력하세요.</div><br>
 						
 						<div class="d-grid">
-							<button class="btn btn-primary btn-xl" type="button" id="btn" onclick="idCheck()">중복체크</button>
+							<button class="btn btn-primary btn-l" type="button" id="btn" onclick="idCheck()">중복체크</button>
 						</div>
                     </div>
 		
@@ -68,7 +69,7 @@
                      </div>   
 					<div class="form-floating mb-3">
                         <input class="form-control"id="memberJob" name="memberJob" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">집업</label>
+                        <label for="name">직업</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">직업을 입력하세요.</div>
 					</div>
 		
@@ -81,9 +82,9 @@
 		</div>
 		
 		<div class="d-grid">
-		<input class="btn btn-primary btn-xl" type="submit" value="회원가입"><br>
-		<input class="btn btn-primary btn-xl" type="reset" value="내용 지우기"><br>
-		<input class="btn btn-primary btn-xl" type="submit" value="홈으로" onclick="location.href='main.do'">
+		<input class="btn btn-primary btn-l" type="submit" value="회원가입"><br>
+		<input class="btn btn-primary btn-l" type="reset" value="내용 지우기"><br>
+		<input class="btn btn-primary btn-l" type="button" value="홈으로" onclick="location.href='main.do'">
 		</div>
 		
 		</form>
@@ -92,6 +93,66 @@
 		</div>
 		</section>
 		
+<!-- 카카오 로그인 버튼 -->
+   <a id="btn-kakao-login" href="javascript:void(0)" onclick="kakaoLogin();">
+      <img src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="200" alt="카카오 로그인 버튼"/>
+   </a>
+   <form id="kakaoForm" method="post" action="kakaoLogin.do">
+      <input type="hidden" name="email"/>
+      <input type="hidden" name="name"/>
+   </form>
+<!--    <ul> -->
+<!--       <li onclick="kakaoLogout();"> -->
+<!--          <a href="javascript:void(0)"> -->
+<!--              <span>카카오 로그아웃</span> -->
+<!--          </a> -->
+<!--       </li> -->
+<!--    </ul> -->
+
+<!-- 카카오 스크립트 -->
+   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+   <script>
+   Kakao.init('8979f5b92eaf5997a6ea3ade6a7e65f1'); //발급받은 키 중 javascript키를 사용해준다.
+   //카카오로그인
+   function kakaoLogin() {
+       Kakao.Auth.login({
+         success: function (response) {
+           Kakao.API.request({ // 사용자 정보 가져오기
+             url: '/v2/user/me',
+             success: function (response) { 
+                var account = response.kakao_account;
+                  $('#kakaoForm input[name=email]').val(account.email);
+               $('#kakaoForm input[name=name]').val(account.profile.nickname);
+               // 사용자 정보가 포함된 폼을 서버로 제출한다.
+               document.querySelector('#kakaoForm').submit();
+             },
+             fail: function (error) {
+               console.log(error)
+             },
+           })
+         },
+         fail: function (error) {
+           console.log(error)
+         },
+       })
+     }
+   //카카오로그아웃 ()
+   function kakaoLogout() {
+       if (Kakao.Auth.getAccessToken()) {
+         Kakao.API.request({
+           url: '/v1/user/unlink',
+           success: function (response) {
+              console.log(response)
+           },
+           fail: function (error) {
+             console.log(error)
+           },
+         })
+         Kakao.Auth.setAccessToken(undefined)
+       }
+     }  
+   </script>
+
 
 
 <script type="text/javascript">

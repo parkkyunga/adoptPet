@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align="center">
-	<div><h1>게시글 수정 등록</h1></div>
+	<div><h1>NOTICE UPDATE</h1></div>
 	<div>
 		<form id="frm" action="noticeUpdateForm.do" method="post" enctype="multipart/form-data">
 			순번<input type="number" id="boardNo" name="boardNo" value="${boardVO.boardNo}">
