@@ -140,7 +140,7 @@ img {
     </div>
         	</div>
     	</div>
-		<table border="1">
+		<table>
 				<tr style="background: #f2f2f2;">
 					<th width="200">동물유형</th>
 					<td width="200">${vo.petListType}</td>
@@ -223,10 +223,10 @@ img {
 	      .then(function(result){
 	         if(result==1) {
 	            alert("삭제가 완료되었습니다!");
-	            location.href = "petList.do";
+	            location.href = 'petList.do';
 	         }else{
 	            alert("삭제가 되지않았습니다!");
-	            location.href = "petList.do";
+	            location.href = 'petList.do';
 	         }
 	      })
 	      .catch(function(err){
@@ -254,9 +254,11 @@ img {
 					if(result == 1) {
 						alert("신청되었습니다!");
 						document.getElementById('id01').style.display='none';
+						location.href = 'petList.do';
 					} else {
 						alert("신청되지않았습니다!");
 						document.getElementById('id01').style.display='none';
+						location.href = 'petList.do';
 					}
 				},
 				error : function(error) {

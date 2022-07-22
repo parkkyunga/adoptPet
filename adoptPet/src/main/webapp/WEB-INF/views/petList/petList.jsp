@@ -10,22 +10,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/adoptpet.css" rel="stylesheet" />   
 <style>
-
-/* #cardList { */
-
-/*   position: absolute;  */
-/*   top: 0;  */
-/*   right: 0;  */
-/*   padding: 20px;  */
-/* } */
-
-
 	.card {
 	  float:left;
 	  margin:15px;
 	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	  transition: 0.3s;
-	  width: 330px;
+	  width: 370px;
 	  height: 350px;
 	}
 	
@@ -37,8 +27,6 @@
 	  padding: 2px 16px;
 	}
 	
-
-/* ===== */
 	#search {
 		display: inline-block;
 		float: right;
@@ -56,7 +44,7 @@
 
 </head>
 <body>
-<div id="list">
+		<div id="list">
 		<section class="notice">
   		<div class="page-title">
         	<div class="container">
@@ -90,11 +78,11 @@
 			<div class="card">
 				<c:if test="${empty list.filesPath1}">
 	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-	  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
+	  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:100%"></a>
 	  			</c:if>
 	  			<c:if test="${not empty list.filesPath1}">
 	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-	  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
+	  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:100%"></a>
 	  			</c:if>
 	  			 <div class="container">
 	   			 	<h5>[${list.petListState}]&nbsp;<b><a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">${list.petListTitle}</a></b></h5> 

@@ -8,7 +8,8 @@
 <title>입양동물 수정 폼</title>
 </head>
 <body>
-		<section class="page-section" id="contact">&nbsp;
+
+	<section class="page-section" id="contact">&nbsp;
 		<div class="container px-4 px-lg-5">
 			<div class="row gx-4 gx-lg-5 justify-content-center">
 				<div class="col-lg-8 col-xl-6 text-center">

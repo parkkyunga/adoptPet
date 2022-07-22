@@ -76,6 +76,6 @@ public class PetListUpdate implements Command {
 			}
 			
 		if(r>0) {request.setAttribute("r", r);}
-		return "petList/petListUpdateForm";
+		return "petList.do";
 	}
 }
