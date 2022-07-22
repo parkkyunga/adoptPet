@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>봉사활동 후기 리스트</title>
 <script src="js/jquery-3.6.0.min.js"></script> <!-- 제이쿼리 라이브러리 쓰겠다. -->
+<link href="css/adoptpet.css" rel="stylesheet" />   
 </head>
 <body>
 	<div id="list" align="center">
@@ -27,12 +28,12 @@
 			<table border="1">
 				<thead>
 					<tr>
-						<th width="50">No</th>
-						<th width="50">게시판순서</th>
-						<th width="100">작성자</th>
-						<th width="150">제목</th>
-						<th width="150">작성일자</th>
-						<th width="50">조회수</th>
+						<th >No</th>
+						<th >게시판순서</th>
+						<th >작성자</th>
+						<th>제목</th>
+						<th >작성일자</th>
+						<th>조회수</th>
 					</tr>
 				</thead>
 				<tbody id="tb">
@@ -65,18 +66,18 @@
 <br>
 <div>
 	<%-- <c:if test="${author != 'ADMIN' }"> --%><!-- 접근권한  -->
-	<button type="button" onclick="location.href='volReviewForm.do'">후기글등록</button>
+	<button type="button" class="btn btn-primary btn-xl" onclick="location.href='volReviewForm.do'">후기글등록</button>
 	<%-- </c:if> --%>
 </div>
 </div>
-	<div>
+	<div  style="text-align: center">
 		<% 	int pageCount = (int)request.getAttribute("pageCount");
 			int pageBlock = (int)request.getAttribute("pageBlock");
 			int startPage = (int)request.getAttribute("startPage"); //게시글이 하나도 없을때 0이다.
 			int endPage = (int)request.getAttribute("endPage");
 			
 			for (int i = startPage; i<=endPage; i++) { %>
-				<a href="volReviewList.do?pageNum=<%=i%>"><%=i %></a>
+				<a  href="volReviewList.do?pageNum=<%=i%>"><%=i %></a>
 			<% } %>
 	</div>	
 	

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>봉사활동 후기 수정</title>
+<link href="css/adoptpet.css" rel="stylesheet" /> 
 </head>
 <body>
 	<div align="center">
@@ -20,8 +21,8 @@
 							<c:when test="${not empty BoardVO }">
 								<input type="hidden" id="boardNo" size="73" name="boardNo" value="${BoardVO.boardNo}">
 						<tr>
-							<th width="100">게시판유형</th>
-							<td width="200"><input type="text" size="73" id="boardId" name="boardId" value="${BoardVO.boardId }">
+							<th >게시판유형</th>
+							<td><input type="text" size="73" id="boardId" name="boardId" value="${BoardVO.boardId }">
 							<td></td>
 						</tr>
 
@@ -31,7 +32,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th width="100">작성자</th>
+							<th >작성자</th>
 							<td><input type="text" id="boardWriter" name="boardWriter" value="${BoardVO.boardWriter }"></td>
 						</tr>
 

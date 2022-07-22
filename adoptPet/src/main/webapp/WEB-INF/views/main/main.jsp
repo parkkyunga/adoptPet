@@ -136,7 +136,7 @@
             
 
               
-             <c:if test="${author =='admin'}">
+             <c:if test="${author =='ADMIN'}">
              <div class="col-lg-3 col-md-6 text-center">
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>

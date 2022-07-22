@@ -71,20 +71,20 @@
 		if(author.equals("ADMIN")) { // 로그인 함-> 권한:admin %>
 				
 					<ul class="navbar-nav ms-auto my-2 my-lg-0">
-					<li class="nav-item"><a class="nav-link" href="#">ADOPTPAGE</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">VOLUNTEER</a></li>
-					<li class="nav-item"><a class="nav-link" href="#services">COMMUNITY</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">ADOPTPAGE</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">VOLUNTEER</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">COMMUNITY</a></li>
 					<li class="nav-item"><a class="nav-link" href="qnaBoardList.do">Q&A</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">관리자페이지</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">관리자페이지</a></li>
 					<li class="nav-item"><a class="nav-link" href="memberLogout.do">로그아웃</a></li>
 				</ul>
 				
 				<%} else { // 로그인 함-> 권한:USER %>
 				
 					<ul class="navbar-nav ms-auto my-2 my-lg-0">
-					<li class="nav-item"><a class="nav-link" href="#">ADOPTPAGE</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">VOLUNTEER</a></li>
-					<li class="nav-item"><a class="nav-link" href="#services">COMMUNITY</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">ADOPTPAGE</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">VOLUNTEER</a></li>
+					<li class="nav-item"><a class="nav-link" href="main.do#services">COMMUNITY</a></li>
 					<li class="nav-item"><a class="nav-link" href="qnaBoardList.do">Q&A</a></li>
 					<li class="nav-item"><a class="nav-link" href="memberMyPage.do">MYPAGE</a></li>
 					<li class="nav-item"><a class="nav-link" href="memberLogout.do">로그아웃</a></li>
