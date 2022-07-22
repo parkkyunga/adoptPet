@@ -63,11 +63,11 @@
 		</table>
 </div>
 <br>
+<!--<c:if test="${author != 'USER' }"> --> <!-- </c:if> -->
 <div>
-	<%-- <c:if test="${author != 'ADMIN' }"> --%><!-- 접근권한  -->
-	<button type="button" onclick="location.href='qnaBoardForm.do'">문의글 등록</button>
-	<%-- </c:if> --%>
+	<button type="button" onclick="location.href='qnaBoardForm.do'">글 작성</button>
 </div>
+
 </div>
 	<div>
 		<% 	int pageCount = (int)request.getAttribute("pageCount");
@@ -118,7 +118,7 @@
 			$('table').append(tbody);
 		}
 
-		function volReviewDeleteFnc(boardNo) {
+		function qnaBoardDeleteFnc(boardNo) {
 			fetch('qnaBoardDelete.do',{
 				method: 'post',
 				headers: {

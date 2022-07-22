@@ -11,7 +11,7 @@
 <body>
 	<div id="list" align="center">
 	
-		<div>VOLUNTEERREVIEW LIST</div>
+		<div>봉사활동후기 목록</div>
 		<div>
 			<form id="vFrm">
 				<select id="key" name="key">
@@ -28,7 +28,7 @@
 				<thead>
 					<tr>
 						<th width="50">No</th>
-						<th width="50">순번</th>
+						<th width="50">게시판순서</th>
 						<th width="100">작성자</th>
 						<th width="150">제목</th>
 						<th width="150">작성일자</th>
@@ -65,7 +65,7 @@
 <br>
 <div>
 	<%-- <c:if test="${author != 'ADMIN' }"> --%><!-- 접근권한  -->
-	<button type="button" class="btn btn-primary btn-xl" onclick="location.href='volReviewForm.do'">후기글등록</button>
+	<button type="button" onclick="location.href='volReviewForm.do'">후기글등록</button>
 	<%-- </c:if> --%>
 </div>
 </div>

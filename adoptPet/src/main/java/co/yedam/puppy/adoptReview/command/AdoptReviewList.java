@@ -17,7 +17,7 @@ public class AdoptReviewList implements Command{
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// 후기 게시판 리스트
 		BoardService noticeDao = new BoardServiceImpl();
-		int cnt = noticeDao.boardCount();
+		int cnt = noticeDao.apodtReviewCount();
 		int pageSize = 10;
 		
 		String pageNum = request.getParameter("pageNum");
