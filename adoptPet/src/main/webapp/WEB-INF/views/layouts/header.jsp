@@ -90,7 +90,6 @@
 					<li class="nav-item"><a class="nav-link" href="memberMyPage.do">MYPAGE</a></li>
 					<li class="nav-item"><a class="nav-link" href="memberLogout.do">로그아웃</a></li>
 				</ul>
-				
 				<%}%>
 				<%}%>
 

@@ -15,9 +15,13 @@ public class QnaBoardUpdate implements Command {
 		// 문의글 수정
 		BoardService dao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
-		vo.setBoardNo(Integer.parseInt(request.getParameter("boardNo")));
 		
-		request.setAttribute("boardVO", vo);
+		String no = request.getParameter("boardNo");
+		vo.setBoardNo(Integer.parseInt(no));
+		
+		vo = dao.qnaBoardSelect(vo);
+		
+		request.setAttribute("BoardVO", vo);
 		
 		return "qna/qnaBoardList";
 	}

@@ -14,11 +14,11 @@ import co.yedam.puppy.board.service.BoardServiceImpl;
 import co.yedam.puppy.comm.Command;
 import co.yedam.puppy.vo.BoardVO;
 
-public class AjaxQnaBoardSearch implements Command {
+public class QnaBoardSearch implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 문의게시판 글 검색
+		// 문의게시판 검색
 		BoardService boardDao = new BoardServiceImpl();
 		List<BoardVO> list = new ArrayList<BoardVO>();
 		ObjectMapper mapper = new ObjectMapper();
