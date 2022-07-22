@@ -155,12 +155,12 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxNoticeInsert.do", new AjaxNoticeSearch());//공지 검색
 		
 		map.put("/volReviewList.do", new VolReviewList()); // 봉사활동후기 리스트
-		map.put("/volReviewSelectOne.do", new VolReviewSelectOne()); // 봉사활동후기 단건조회
 		map.put("/volReviewSearchList.do", new VolReviewSearchList()); // 봉사활동후기 검색
-		map.put("/volReviewForm.do", new VolReviewForm()); // 봉사활동 후기 등록 폼 페이지로 이동
+		map.put("/volReviewSelectOne.do", new VolReviewSelectOne()); // 봉사활동후기 단건조회
 		map.put("/volReviewInsert.do", new VolReviewInsert()); // 봉사활동후기 등록
-		map.put("/volReviewUpdateForm.do", new VolReviewUpdateForm()); //봉사활동 후기 수정 폼
+		map.put("/volReviewForm.do", new VolReviewForm()); // 봉사활동 후기 등록 폼 페이지로 이동
 		map.put("/volReviewUpdate.do", new VolReviewUpdate()); // 봉사활동후기 수정
+		map.put("/volReviewUpdateForm.do", new VolReviewUpdateForm()); //봉사활동 후기 수정 폼
 		map.put("/volReviewDelete.do", new VolReviewDelete()); // 봉사활동 후기 삭제
 
 		map.put("/memberOnePage.do", new MemberOnePage()); //관리자가보는 멤버한명조회

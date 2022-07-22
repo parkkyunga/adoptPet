@@ -102,79 +102,9 @@
 	 calendar.render();
 
 	 console.log(schedules);
-	 }) // schedules => [{},{},{}]
+	 }) // schedules => [{},{},{}] */
 
 
-	}); // document.addEventListener('DOMContentLoaded', function ()
-	 */
-/* 	 document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-        	headerToolbar : {
-				left : 'prev,next today,addEventButton',
-				center : 'title', // YYYY년 MM월
-				right : 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-        	},
-        	
-        	    events: [
-        	        {
-        	          title: 'All Day Event',
-        	          start: '2020-09-01'
-        	        },
-        	        {
-        	          title: 'Long Event',
-        	          start: '2020-09-07',
-        	          end: '2020-09-10'
-        	        },
-        	        {
-        	          groupId: 999,
-        	          title: 'Repeating Event',
-        	          start: '2020-09-09T16:00:00'
-        	        },
-        	        {
-        	          groupId: 999,
-        	          title: 'Repeating Event',
-        	          start: '2020-09-16T16:00:00'
-        	        },
-        	        {
-        	          title: 'Conference',
-        	          start: '2020-09-11',
-        	          end: '2020-09-13'
-        	        },
-        	        {
-        	          title: 'Meeting',
-        	          start: '2020-09-12T10:30:00',
-        	          end: '2020-09-12T12:30:00'
-        	        },
-        	        {
-        	          title: 'Lunch',
-        	          start: '2020-09-12T12:00:00'
-        	        },
-        	        {
-        	          title: 'Meeting',
-        	          start: '2020-09-12T14:30:00'
-        	        },
-        	        {
-        	          title: 'Happy Hour',
-        	          start: '2020-09-12T17:30:00'
-        	        },
-        	        {
-        	          title: 'Dinner',
-        	          start: '2020-09-12T20:00:00'
-        	        },
-        	        {
-        	          title: 'Birthday Party',
-        	          start: '2020-09-13T07:00:00'
-        	        },
-        	        {
-        	          title: 'Click for Google',
-        	          url: 'http://google.com/',
-        	          start: '2020-09-28'
-        	        }
-        	      ]
-        });
-        calendar.render();
-      });  */
       
       document.addEventListener('DOMContentLoaded', function() {
     	    var calendarEl = document.getElementById('calendar');
@@ -212,58 +142,90 @@
     	      dayMaxEvents: true, // allow "more" link when too many events
     	      events: [
     	        {
-    	          title: 'All Day Event',
-    	          start: '2020-09-01'
+    	          title: '앵두네집',
+    	          start: '2022-07-01'
     	        },
     	        {
-    	          title: 'Long Event',
-    	          start: '2020-09-07',
-    	          end: '2020-09-10'
+      	          title: '앵두네집',
+      	          start: '2022-07-30'
+      	        },
+    	        {
+        	      title: '앵두네집',
+        	      start: '2022-07-17'
+        	    },
+    	        {
+          	      title: '창녕 쉼터',
+          	      start: '2022-07-03'
+          	    },
+                {
+            	  title: '칠곡 반둥이네',
+            	   start: '2022-07-02'
+            	},
+    	        {
+    	          title: '창녕 쉼터',
+    	          start: '2022-07-11',
+    	          end: '2022-07-16'
     	        },
     	        {
-    	          groupId: 999,
-    	          title: 'Repeating Event',
-    	          start: '2020-09-09T16:00:00'
+	  	          title: '대구 반야월 쉼터',
+		          start: '2022-07-16',
+	          	  end: '2022-07-23'
+	       		 },
+	    	     {
+		  	       title: '대구 반야월 쉼터',
+			       start: '2022-07-10',
+		           end: '2022-07-11'
+		        },
+	    	    {
+			  	    title: '경산 쉼터',
+				    start: '2022-07-24',
+			        end: '2022-07-25'
+			    },
+    	        {
+      	          title: '대구반야월 쉼터',
+      	          start: '2022-07-19',
+      	          end: '2022-07-20'
+      	        },
+      	      {
+      	          title: '칠곡 반둥이네',
+      	          start: '2022-07-07',
+      	          end: '2022-07-08'
+      	        },
+      	      {
+      	          title: '양산 사랑이네 집',
+      	          start: '2022-07-25',
+      	          end: '2022-07-26'
+      	        },
+      	       {
+        	       title: '경산 쉼터',
+        	       start: '2022-07-31',
+        	        end: '2022-08-01'
+        	    },
+        	    {
+         	       title: '경산 쉼터',
+         	       start: '2022-07-09',
+         	        end: '2022-07-10'
+         	    },
+        	    {
+          	       title: '반야월 쉼터',
+          	       start: '2022-07-04',
+          	        end: '2022-07-05'
+          	    },
+        	    {
+           	       title: '칠곡 반둥이네',
+           	       start: '2022-07-27',
+           	        end: '2022-07-28'
+           	    },
+         	        
+        	   	{
+    	          title: 'Project',
+    	          start: '2022-07-22',
+    	          end: '2022-07-23'
     	        },
     	        {
-    	          groupId: 999,
-    	          title: 'Repeating Event',
-    	          start: '2020-09-16T16:00:00'
-    	        },
-    	        {
-    	          title: 'Conference',
-    	          start: '2020-09-11',
-    	          end: '2020-09-13'
-    	        },
-    	        {
-    	          title: 'Meeting',
-    	          start: '2020-09-12T10:30:00',
-    	          end: '2020-09-12T12:30:00'
-    	        },
-    	        {
-    	          title: 'Lunch',
-    	          start: '2020-09-12T12:00:00'
-    	        },
-    	        {
-    	          title: 'Meeting',
-    	          start: '2020-09-12T14:30:00'
-    	        },
-    	        {
-    	          title: 'Happy Hour',
-    	          start: '2020-09-12T17:30:00'
-    	        },
-    	        {
-    	          title: 'Dinner',
-    	          start: '2020-09-12T20:00:00'
-    	        },
-    	        {
-    	          title: 'Birthday Party',
-    	          start: '2020-09-13T07:00:00'
-    	        },
-    	        {
-    	          title: 'Click for Google',
-    	          url: 'http://google.com/',
-    	          start: '2020-09-28'
+    	          title: '데려가줘 PICK ME',
+    	          url: 'http://daeguoracle.com/',
+    	          start: '2022-07-28'
     	        }
     	      ]
   
