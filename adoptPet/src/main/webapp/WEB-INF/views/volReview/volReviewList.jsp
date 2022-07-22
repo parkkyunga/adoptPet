@@ -11,7 +11,7 @@
 <body>
 	<div id="list" align="center">
 	
-		<div>봉사활동후기 목록</div>
+		<div>VOLUNTEERREVIEW LIST</div>
 		<div>
 			<form id="vFrm">
 				<select id="key" name="key">
