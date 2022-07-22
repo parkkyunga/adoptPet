@@ -9,7 +9,7 @@
 <body>
 	<div align="center">
 		<div>
-			<h1>게시글 수정 등록</h1>
+			<h1>VOLUNTEERREVIEW UPDATE</h1>
 		</div>
 	<div>
 		<form action="volReviewUpdateForm.do" method="post">
