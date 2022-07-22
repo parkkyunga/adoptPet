@@ -20,9 +20,6 @@ public class QnaBoardInsert implements Command {
 		vo.setBoardTitle(request.getParameter("boardTitle"));
 		vo.setBoardWriter(request.getParameter("boardWriter"));
 		vo.setBoardContent(request.getParameter("boardContent"));
-		System.out.println(request.getParameter("boardTitle"));
-		System.out.println(request.getParameter("boardWriter"));
-		System.out.println(request.getParameter("boardContent"));
 		
 		HttpSession session = request.getSession();
 		String id = (String) session.getAttribute("id");
@@ -35,7 +32,7 @@ public class QnaBoardInsert implements Command {
 		} else {
 			request.setAttribute("message", "등록처리가 실패했습니다.");
 		}
-		return "qna/qnaBoardList.do"; 
+		return "qnaBoardList.do"; 
 	}
 		
 

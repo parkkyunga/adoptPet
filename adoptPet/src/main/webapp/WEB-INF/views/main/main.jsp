@@ -13,6 +13,17 @@
 <body>
  <!-- Masthead-->
 <header class="masthead">
+<div style="float:right;"
+  id="kakao-talk-channel-chat-button"
+  data-channel-public-id="_zfHRxj"
+  data-title="question"
+  data-size="small"
+  data-color="yellow"
+  data-shape="pc"
+  data-support-multiple-densities="true"
+></div>
+  	 
+
     <div class="container px-4 px-lg-5 h-100">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-end">
@@ -134,7 +145,22 @@
 </section>
 
      </body>
+     
+     
+<script>
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+    });
+  };
 
-
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://developers.kakao.com/sdk/js/kakao.channel.min.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'kakao-js-sdk');
+</script>
 
 </html>

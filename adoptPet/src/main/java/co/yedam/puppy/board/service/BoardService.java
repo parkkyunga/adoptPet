@@ -41,7 +41,7 @@ public interface BoardService {
 	BoardVO qnaBoardSelect(BoardVO vo);//문의글 상세보기
 	int qnaBoardInsert(BoardVO vo);//문의 글쓰기
 	int qnaBoardUpdate(BoardVO vo);//문의 글 수정
-	int qnaBoardDelete(BoardVO vo);//문의 글 삭제 
+	int qnaBoardDelete(int boardNo);//문의 글 삭제 
 	List<BoardVO> qnaBoardSearchList(String key, String val);//검색
 	int qnaBoardCount();// 문의게시판 글 개 수 확인 
 	

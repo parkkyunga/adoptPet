@@ -860,7 +860,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int qnaBoardDelete(BoardVO vo) { 
+	public int qnaBoardDelete(int boardNo) { 
 		// 문의게시판 글 삭제
 		int n = 0;
 		String sql = "DELETE FROM BOARD WHERE BOARD_NO=?"; 
@@ -868,7 +868,7 @@ public class BoardServiceImpl implements BoardService {
 		try {
 			conn=dao.getConnection();
 			psmt=conn.prepareStatement(sql);
-			psmt.setInt(1, vo.getBoardNo());
+			psmt.setInt(1, boardNo);
 			psmt.executeUpdate();
 			
 			n = 1;  
