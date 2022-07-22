@@ -158,7 +158,7 @@ img {
 								</c:if> 
 							</c:forEach>
 						</div>
-						<div>${vo.petListContent}</div> 
+						<div><pre>${vo.petListContent}</pre></div> 
 					</td>
 				</tr>
 		</table>
@@ -185,7 +185,7 @@ img {
       <p>Please fill in this form to create an account.</p>
       <hr>
       <label for="memberId"><b>신청자 아이디</b></label>
-      <input type="text" id="memberId" name="memberId" value="lee" required>
+      <input type="text" id="memberId" name="memberId" value="${id }" required>
 
       <label for="petAddNo"><b>동물 번호</b></label>
       <input type="text" id="petAddNo" name="petAddNo" value="${vo.petAddNo}" required>

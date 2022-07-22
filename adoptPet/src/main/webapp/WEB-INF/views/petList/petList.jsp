@@ -56,22 +56,19 @@
 
 </head>
 <body>
-
-
-<!-- =========== -->
-	
-    	
-    	
-		
-		
-		<div id="list">
+<div id="list">
 		<section class="notice">
   		<div class="page-title">
         	<div class="container">
-            	<h3>입양동물 소개</h3>
-            	<c:if test="${author eq 'ADMIN' }">
-            	<div id="search" align="right">
+            	<div class="row gx-4 gx-lg-5 justify-content-center">
+				<div class="col-lg-8 col-xl-6 text-center">
+					<h2 class="mt-0">PET&nbsp;&nbsp;INTRODUCE</h2>
+					<hr class="divider" />
+				</div>
+			</div>
             	
+            	
+        <div id="search" align="right">
 			<form id="frm" action="petListSearch.do" method="post">
 				<select id="key" name="key" >
 					<option value="pet_list_title">제목</option>
@@ -81,44 +78,49 @@
 				<input type="submit" value="검색"  >
 			</form>
 		</div>
+		<c:if test="${author eq 'ADMIN' }">
 			<button type="button" class="btn btn-primary btn-xl"  style="clear:both; margin-bottom: 20px;" onclick="location.href='petAddList.do'">입양등록</button>
 		</c:if>
         	</div>
     	</div>
+ 
 
-<div id="cardList">
-<c:forEach var="list" items="${petList}">
-		<div class="card">
-			<c:if test="${empty list.filesPath1}">
-  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:370px" height="240px"></a>
-  			</c:if>
-  			<c:if test="${not empty list.filesPath1}">
-  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
-  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
-  			</c:if>
-  			 <div class="container">
-   			 	<h5>[${list.petListState}]&nbsp;<b><a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">${list.petListTitle}</a></b></h5> 
-   			 		<div>
-						<button id="heartBtn" type="button" class="btn btn-primary btn-xl" onclick="heartCheckFnc(${list.petListNo},${list.heartNum })">
-							<c:choose>
-								<c:when test="${list.heartCheck == 1}">
-									<img id="img${list.petListNo}" width="20" height="20" src="images/redHeart.png">
-								</c:when>
-								<c:otherwise>
-									<img id="img${list.petListNo}" width="20" height="20" src="images/whiteHeart.png">
-								</c:otherwise>
-							</c:choose>
-						</button>
-						<span id="heartNum${list.petListNo}">${list.heartNum }</span> 
-					</div>
- 			 </div>
-		</div>
-</c:forEach>
-</div>
-		
-		
+	<div id="cardList">
+	<c:forEach var="list" items="${petList}">
+			<div class="card">
+				<c:if test="${empty list.filesPath1}">
+	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
+	  			<img src="fileup/noImage.png" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
+	  			</c:if>
+	  			<c:if test="${not empty list.filesPath1}">
+	  			<a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">
+	  			<img src="fileup/${list.filesPath1}" class="avatar" alt="Avatar" style="width:328px" height="240px"></a>
+	  			</c:if>
+	  			 <div class="container">
+	   			 	<h5>[${list.petListState}]&nbsp;<b><a href="petListView.do?petListNo=${list.petListNo}&petAddNo=${list.petAddNo}">${list.petListTitle}</a></b></h5> 
+	   			 	<p>
+	   			 		<div>
+							<button id="heartBtn" type="button" class="btn btn-primary btn-xl" onclick="heartCheckFnc(${list.petListNo},${list.heartNum })">
+								<c:choose>
+									<c:when test="${list.heartCheck == 1}">
+										<img id="img${list.petListNo}" width="20" height="20" src="images/redHeart.png">
+									</c:when>
+									<c:otherwise>
+										<img id="img${list.petListNo}" width="20" height="20" src="images/whiteHeart.png">
+									</c:otherwise>
+								</c:choose>
+							</button>
+							<span id="heartNum${list.petListNo}">${list.heartNum }</span> 
+						</div>
+	   			 	</p> 
+	 			 </div>
+			</div>
+	</c:forEach>
+
 	</div>
+</div>
+	
+	<%--페이징처리 --%>
 	<div id="paging" style="clear:both; text-align: center;">
 	<% 	int pageCount = (int)request.getAttribute("pageCount");
 		int pageBlock = (int)request.getAttribute("pageBlock");
@@ -161,6 +163,5 @@
 				}
 		
 	</script>
-
 </body>
 </html>

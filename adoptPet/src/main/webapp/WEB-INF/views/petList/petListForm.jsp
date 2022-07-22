@@ -13,7 +13,7 @@
 		<div class="container px-4 px-lg-5">
 			<div class="row gx-4 gx-lg-5 justify-content-center">
 				<div class="col-lg-8 col-xl-6 text-center">
-					<h2 class="mt-0">동물 소개글 등록</h2>
+					<h2 class="mt-0">INSERT&nbsp;&nbsp; PET&nbsp;&nbsp; INTRODUCE</h2>
 					<hr class="divider" />
 				</div>
 			</div>
