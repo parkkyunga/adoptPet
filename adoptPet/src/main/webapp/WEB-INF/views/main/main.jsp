@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +8,7 @@
 
 <script type="text/javascript">
 
+<!-- 카카오톡 상담 -->
 </script>
 </head>
 <body>
@@ -96,6 +97,8 @@
         <h2 class="text-center mt-0">At Your Service</h2>
         <hr class="divider" />
         <div class="row gx-4 gx-lg-5">
+        
+          
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
@@ -103,11 +106,10 @@
 
                     <a class="text-muted mb-0" href="memberMyPage.do">내 정보 보기</a><br>
                     <a class="text-muted mb-0" href="memberAdopt.do">나의 입양 신청</a><br>
-
-
                     <a class="text-muted mb-0" href="#">나의 봉사참여 신청현황</a>
                 </div>
             </div>
+           
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
@@ -132,6 +134,10 @@
                     <a class="text-muted mb-0" href="qnaBoardList.do">Q&A</a>
                 </div>
             </div>
+            
+
+              
+             <c:if test="${author =='admin'}">
              <div class="col-lg-3 col-md-6 text-center">
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
@@ -140,13 +146,15 @@
                     <a class="text-muted mb-0" href="adoptList.do">입양신청 내역</a>
                 </div>
             </div>
+         </c:if>
+            
         </div>
     </div>
 </section>
 
      </body>
      
-     
+<!-- 카카오톡 상담 -->     
 <script>
   window.kakaoAsyncInit = function() {
     Kakao.Channel.createChatButton({
