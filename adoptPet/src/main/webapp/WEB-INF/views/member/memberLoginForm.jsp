@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
 <title>로그인</title>
 </head>
 <body>
@@ -41,6 +44,8 @@
 
 	
 	</div>
+
+
                         </form>
                     </div>
                 </div>
@@ -70,6 +75,7 @@
 <!--          </a> -->
 <!--       </li> -->
 <!--    </ul> -->
+
 
 <!-- 카카오 스크립트 -->
    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
@@ -114,6 +120,5 @@
        }
      }  
    </script>
-
 </body>
 </html>
