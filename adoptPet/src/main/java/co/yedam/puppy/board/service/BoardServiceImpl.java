@@ -20,17 +20,18 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardVO> volReviewSelectList(int currentPage, int startRow, int pageSize) {
 		// 봉사(board_id=40)후기 게시판 전체조회 목록 (페이징처리) 
+		System.out.println("DB : "+currentPage + "="+startRow+"="+pageSize);
 		List<BoardVO> list = new ArrayList<>();
 		BoardVO vo;
-		String sql = "SELECT *\r\n"
-				+ "  FROM (\r\n"
-				+ "        SELECT ROW_NUMBER() OVER (ORDER BY BOARD_NO DESC) NUM\r\n" 
-				+ "             , A.*\r\n"
-				+ "          FROM BOARD A\r\n" 
-				+ "         ORDER BY BOARD_NO DESC\r\n" 
-				+ "        ) \r\n"
-				+ " WHERE NUM BETWEEN ? AND ? " 
-				+ "AND BOARD_ID = 40";
+		String sql = "SELECT *"
+				+ "  FROM ("
+				+ "        SELECT ROW_NUMBER() OVER (ORDER BY BOARD_NO DESC) NUM" 
+				+ "             , A.* "
+				+ "          FROM BOARD A " 
+				+ "          WHERE BOARD_ID = 40 ORDER BY BOARD_NO DESC" 
+				+ "        )"
+				+ " WHERE NUM BETWEEN ? AND ? " ;
+//				+ "AND BOARD_ID = 40";
 		
 		try {
 			conn = dao.getConnection();

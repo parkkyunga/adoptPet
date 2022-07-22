@@ -18,7 +18,7 @@ button {
 </style>
 </head>
 <body>
-			<h1>VOLUNTEERREVIEW</h1>
+			<h1>봉사후기 내용</h1>
 		
 		
 			<form name="writeFrm">

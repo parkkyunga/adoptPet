@@ -41,6 +41,7 @@ public class VolReviewList implements Command {
 	    
 		// 첫행번호를 계산
 		int currentPage = Integer.parseInt(pageNum);
+		System.out.println(currentPage + "==================");
 		int startRow = (currentPage - 1) * pageSize + 1;
 
 		// pageSize만큼 list에 게시글 저장

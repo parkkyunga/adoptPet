@@ -9,9 +9,9 @@
 </head>
 <body>
 	<div align="center">
-		<div><h1>VOLUNTEERREVIEW INSERT</h1></div>
+		<div><h1>봉사후기등록</h1></div>
 		<div>
-			<form id="vFrm" action="volReviewInsert.do" method="post" >
+			<form id="vFrm" action="volReviewInsertForm.do" method="post" >
 				<div>
 					<table border="1">
 					<tr>
