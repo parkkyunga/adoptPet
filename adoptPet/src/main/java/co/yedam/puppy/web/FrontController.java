@@ -182,7 +182,7 @@ public class FrontController extends HttpServlet {
 		map.put("/qnaBoardSelect.do", new QnaBoardSelect()); // 문의글 보기 !!!!!!!!
 		map.put("/qnaBoardForm.do", new QnaBoardForm());// 문의글 입력폼 호출
 		map.put("/qnaBoardInsert.do", new QnaBoardInsert()); // 문의글 등록
-		map.put("/qnaBoardUpdateForm.do", new QnaBoardUpdate()); // 문의글 수정
+//		map.put("/qnaBoardUpdateForm.do", new QnaBoardUpdate()); // 문의글 수정
 		map.put("/qnaBoardDelete.do", new QnaBoardDelete()); // 문의글 삭제
 		map.put("/qnaBoardSearch.do", new QnaBoardSearch()); // 문의글 검색
 
