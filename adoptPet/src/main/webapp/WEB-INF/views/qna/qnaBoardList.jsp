@@ -69,16 +69,7 @@
 </div>
 
 </div>
-	<div>
-		<% 	int pageCount = (int)request.getAttribute("pageCount");
-			int pageBlock = (int)request.getAttribute("pageBlock");
-			int startPage = (int)request.getAttribute("startPage"); 
-			int endPage = (int)request.getAttribute("endPage");
-			
-			for (int i = startPage; i<=endPage; i++) { %>
-				<a href="qnaBoardList.do?pageNum=<%=i%>"><%=i %></a>
-			<% } %>
-	</div>	
+	
 	
 <script type="text/javascript">
 		function qnaBoardSearch(){

@@ -113,7 +113,7 @@
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
                     <h3 class="h4 mb-2">Adopt Page</h3>
-                    <a class="text-muted mb-0" href="petListView.do">동물 보러 가기</a><br>
+                    <a class="text-muted mb-0" href="petList.do">동물 보러 가기</a><br>
                     <a class="text-muted mb-0" href="adoptReviewList.do">입양 동물 후기</a>
                 </div>
             </div>
@@ -136,7 +136,7 @@
             
 
               
-             <c:if test="${author =='admin'}">
+             <c:if test="${author =='ADMIN'}">
              <div class="col-lg-3 col-md-6 text-center">
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
