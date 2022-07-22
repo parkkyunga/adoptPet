@@ -552,7 +552,7 @@ public class BoardServiceImpl implements BoardService {
 		return bvo;
 	}
 	@Override
-	public BoardVO adoptFeviewSelectOne(BoardVO vo) {
+	public BoardVO adoptReviewSelectOne(BoardVO vo) {
 		// 후기 단건 조회
 		String sql = "select * from board where board_no=?";
 		

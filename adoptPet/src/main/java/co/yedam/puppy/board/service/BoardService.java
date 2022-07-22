@@ -30,7 +30,7 @@ public interface BoardService {
 	List<BoardVO> adoptReviewSelectList(int currentPage, int startRow, int pageSize);//후기게시판 목록
 	int apodtReviewCount();//DB공지 갯수 확인
 	BoardVO adoptReviewSelect(BoardVO bvo,FilesVO fvo);//후기 상세보기
-	BoardVO adoptFeviewSelectOne(BoardVO vo);//후기 단건 조회
+	BoardVO adoptReviewSelectOne(BoardVO vo);//후기 단건 조회
 	int adoptReviewInsert(BoardVO bvo,FilesVO fvo);//후기 글쓰기
 	int adoptReviewUpdate(BoardVO bvo,FilesVO fvo);//수정
 	int adoptReviewDelete(BoardVO bvo,FilesVO fvo);//삭제

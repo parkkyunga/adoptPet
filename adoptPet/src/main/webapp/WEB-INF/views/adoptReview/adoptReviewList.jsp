@@ -71,7 +71,7 @@
 					<tr>
 						<td>${b.boardNo }</td>
 						<td>${b.boardWriter }</td>
-						<td><a href="noticeSelect.do?no=${b.boardNo }">${b.boardTitle }</a></td>
+						<td><a href="adoptReviewSelect.do?no=${b.boardNo }">${b.boardTitle }</a></td>
 						<td>${b.boardDate }</td>
 						<td>${b.boardHit }</td>
 					</tr>
@@ -96,7 +96,7 @@
 	%>
 				
 				<%for (int i = startPage; i<=endPage; i++) { %>
-					<a href="noticeList.do?pageNum=<%=i%>"><%=i %></a>
+					<a href="adoptReviewList.do?pageNum=<%=i%>"><%=i %></a>
 				<% } %>
 		</div>	
 
@@ -105,7 +105,7 @@
 
 <div>
 	
-	<button class="btn btn-primary btn-l" type="button" onclick="location.href='volReviewForm.do'">글등록</button>
+	<button class="btn btn-primary btn-l" type="button" onclick="location.href='adoptReviewForm.do'">글등록</button>
 	
 </div>
 
@@ -116,7 +116,7 @@
 ;		let val = $("#val").val();
 		//ajax function Call
 		$.ajax({
-			url : "noticeSearch.do",
+			url : "adoptReviewSelect.do",
 			type : "post",
 			data : {key:key, val:val},
 			dataType : "json",
@@ -184,7 +184,7 @@
 		let id = $(td).html();		
 		
 			const xhr = new XMLHttpRequest();
-		const url = "NoticeDelete.do?id="+id;
+		const url = "adoptReviewDelete.do?id="+id;
 		xhr.onload = function(){
 			if(xhr.status >= 200 && xhr.status < 300){
 				if(xhr.response == 1) {
@@ -203,7 +203,7 @@
 	}
 	
 	function noticeSelect(id) {  //get방식 안전하지 않음
-		location.href='noticeSelect.do?id='+id;			
+		location.href='adoptReviewSelect.do?id='+id;			
 	}
 </script> 
 </body>
