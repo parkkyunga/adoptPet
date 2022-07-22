@@ -82,10 +82,10 @@
 
 	<div align="center">
 		<div>
-			<h1>게시글 수정 등록</h1>
+			<h1>VOLUNTEERREVIEW UPDATE</h1>
 		</div>
 	<div>
-		<form action="volReviewUpdate.do" method="post">
+		<form action="volReviewUpdateForm.do" method="post">
 			<div>
 				<table border="1">
 					<tbody>

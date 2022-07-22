@@ -81,7 +81,7 @@ public class PetListInsert implements Command {
 		
 		request.setAttribute("r", r);
 		
-		return "petList/petListForm";
+		return "petList.do";
 	}
 
 }

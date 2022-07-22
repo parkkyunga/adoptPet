@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="css/adoptpet.css">
 </head>
 <body>
-<div class="AdoptDiv">
+<div class="MemberDiv">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-lg-8 col-xl-6 text-center">
             <h2 class="mt-0">MEMBER LIST</h2>
