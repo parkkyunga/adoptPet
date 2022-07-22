@@ -24,6 +24,7 @@ import co.yedam.puppy.admin.command.MemberOnePage;
 import co.yedam.puppy.admin.command.UpdateMemberList;
 import co.yedam.puppy.admin.command.VolunteerList;
 import co.yedam.puppy.admin.command.VolunteerStateSearch;
+import co.yedam.puppy.adoptReview.command.AdoptReviewDelete;
 import co.yedam.puppy.adoptReview.command.AdoptReviewForm;
 import co.yedam.puppy.adoptReview.command.AdoptReviewInsert;
 import co.yedam.puppy.adoptReview.command.AdoptReviewList;
@@ -32,6 +33,7 @@ import co.yedam.puppy.adoptReview.command.AdoptReviewSelect;
 import co.yedam.puppy.adoptReview.command.AdoptReviewUpdate;
 import co.yedam.puppy.adoptSubscription.command.AdoptSubScription;
 import co.yedam.puppy.board.command.AjaxNoticeSearch;
+import co.yedam.puppy.board.command.NoticeDelete;
 import co.yedam.puppy.board.command.NoticeForm;
 import co.yedam.puppy.board.command.NoticeInsert;
 import co.yedam.puppy.board.command.NoticeList;
@@ -152,7 +154,8 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeForm.do", new NoticeForm());//공지 입력폼 호출
 		map.put("/noticeInsert.do", new NoticeInsert()); //공지 등록
 		map.put("/noticeUpdateForm.do", new NoticeUpdate());//공지 수정 폼
-		map.put("/ajaxNoticeInsert.do", new AjaxNoticeSearch());//공지 검색
+		map.put("/ajaxNoticeSearch.do", new AjaxNoticeSearch());//공지 검색
+		map.put("/noticeDelete.do", new NoticeDelete());//공지삭제
 		
 		map.put("/volReviewList.do", new VolReviewList()); // 봉사활동후기 리스트
 		map.put("/volReviewSelectOne.do", new VolReviewSelectOne()); // 봉사활동후기 단건조회
@@ -188,8 +191,9 @@ public class FrontController extends HttpServlet {
 		map.put("/adoptReviewSelect.do", new AdoptReviewSelect());//입양후기 상세보기
 		map.put("/adoptReviewForm.do", new AdoptReviewForm());//입양후기 입력폼 호출
 		map.put("/adoptReviewInsert.do", new AdoptReviewInsert()); //입양후기 등록
-		map.put("/noticeUpdate.do", new AdoptReviewUpdate());//입양후기 수정 폼
-		map.put("/AdoptReviewSearch.do", new AdoptReviewSearch());//입양후기 검색
+		map.put("/adoptUpdate.do", new AdoptReviewUpdate());//입양후기 수정 
+		map.put("/adoptReviewSearch.do", new AdoptReviewSearch());//입양후기 검색
+		map.put("/adoptReviewDelete.do", new AdoptReviewDelete());//입양후기 삭제
 		
 		map.put("/kakaoLogin.do", new KakaoLogin()); //카카오로그인
 
