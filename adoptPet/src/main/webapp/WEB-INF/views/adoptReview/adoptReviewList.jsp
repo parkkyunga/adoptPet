@@ -25,13 +25,20 @@
 </style>
 </head>
 <body>
-<div align="center">
-<section class="notice">
-<div class="page-title">
-        	<div class="container">
-            	<h3>게시판 목록</h3>
-        	</div>
-    	</div>
+
+<section class="page-section" id="contact">
+      <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                        <h2 class="mt-0">ADOPTION REVIEW</h2>
+                        <hr class="divider" />
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        </div>
+        
+               
+
 
 	<div style="float: right; margin: 10px">
 		<form id="frm" >
@@ -97,9 +104,9 @@
 
 
 <div>
-	<c:if test="${author == 'ADMIN' }"><!-- 접근권한  -->
-	<button class="btn btn-primary btn-l" type="button" onclick="location.href='noticeForm.do'">글등록</button>
-	</c:if>
+	
+	<button class="btn btn-primary btn-l" type="button" onclick="location.href='volReviewForm.do'">글등록</button>
+	
 </div>
 
 

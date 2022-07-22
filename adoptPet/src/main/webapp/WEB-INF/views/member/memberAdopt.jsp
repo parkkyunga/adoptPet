@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="js/jquery-3.6.0.min.js"/></script>
+<link href="css/adoptpet.css" rel="stylesheet" />
 </head>
 <body>
    <section class="page-section" id="contact">

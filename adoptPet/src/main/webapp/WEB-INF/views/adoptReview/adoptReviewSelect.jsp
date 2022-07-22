@@ -23,7 +23,7 @@
   		<div class="page-title">
         	 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">입양 후기 </h2>
+                        <h2 class="mt-0">ADOPTION REVIEW </h2>
                         <hr class="divider" />
                     </div>
                 </div>
