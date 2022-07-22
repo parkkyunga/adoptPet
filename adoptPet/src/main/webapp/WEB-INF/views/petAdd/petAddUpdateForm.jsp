@@ -54,10 +54,10 @@
 		
 		<div class="form-floating mb-3">
 			<select class="form-control" id="petAddAdoptState" name="petAddAdoptState" >
-				<option value="입양대기">--선택--</option>
-				<option value="입양대기" <c:if test="${petAddVO.petAddAdoptState eq '입양대기'}">selected</c:if>>입양대기</option>
-				<option value="입양승인" <c:if test="${petAddVO.petAddAdoptState eq '입양승인'}">selected</c:if>>입양승인</option>
-				<option value="입양불가" <c:if test="${petAddVO.petAddAdoptState eq '입양불가'}">selected</c:if>>입양불가</option>
+				<option value="입양승인대기">--선택--</option>
+				<option value="입양승인대기" <c:if test="${petAddVO.petAddAdoptState eq '입양승인대기'}">selected</c:if>>입양대기</option>
+				<option value="입양승인완료" <c:if test="${petAddVO.petAddAdoptState eq '입양승인완료'}">selected</c:if>>입양승인</option>
+				<option value="입양승인불가" <c:if test="${petAddVO.petAddAdoptState eq '입양승인불가'}">selected</c:if>>입양불가</option>
 			</select> <label for="petAddAdoptState">입양여부</label>
 		</div>
 		

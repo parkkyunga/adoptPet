@@ -29,7 +29,7 @@
 
 						<div class="form-floating mb-3">
 							<input class="form-control" type="text" id="petListState"
-								name="petListState" value="입양대기" readonly/> <label for="petListState">입양여부</label>
+								name="petListState" value="입양승인대기" readonly/> <label for="petListState">입양여부</label>
 						</div>
 
 						<input type="hidden" name="boardId" value="50">
